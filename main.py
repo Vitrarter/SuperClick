@@ -1,7 +1,7 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QMainWindow
 from PyQt5.QtWidgets import QLCDNumber, QLabel, QLineEdit, QProgressBar
-from designe import Ui_MainWindow
+from sketh import Ui_MainWindow
 
 
 class Example(QMainWindow, Ui_MainWindow, QProgressBar):
