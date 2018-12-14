@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'designe_ui.ui'
+#
+# Created by: PyQt5 UI code generator 5.11.3
+#
+# WARNING! All changes made in this file will be lost!
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_MainWindow(object):
@@ -93,6 +101,7 @@ class Ui_MainWindow(object):
         self.progressBar_5.setObjectName("progressBar_5")
         self.progressBar_6 = QtWidgets.QProgressBar(self.scrollAreaWidgetContents)
         self.progressBar_6.setGeometry(QtCore.QRect(10, 300, 191, 23))
+        self.progressBar_6.setMaximum(10000)
         self.progressBar_6.setProperty("value", 0)
         self.progressBar_6.setTextVisible(True)
         self.progressBar_6.setOrientation(QtCore.Qt.Horizontal)
@@ -101,6 +110,7 @@ class Ui_MainWindow(object):
         self.progressBar_6.setObjectName("progressBar_6")
         self.progressBar_7 = QtWidgets.QProgressBar(self.scrollAreaWidgetContents)
         self.progressBar_7.setGeometry(QtCore.QRect(10, 360, 191, 23))
+        self.progressBar_7.setMaximum(40000)
         self.progressBar_7.setProperty("value", 0)
         self.progressBar_7.setTextVisible(True)
         self.progressBar_7.setOrientation(QtCore.Qt.Horizontal)

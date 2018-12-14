@@ -43,34 +43,33 @@ class Example(QMainWindow, Ui_MainWindow, QProgressBar):
         self.trig_3 = 0
         self.trig_4 = 0
 
-
     def main_click(self):
         self.count += 1 * self.factor
         self.all += 1 * self.factor
-        if (self.all >= (50 * (self.level+1) * (self.level+1))) and (self.count >= self.last):
-            self.all -= 50 * (self.level+1) * (self.level+1)
+        if (self.all >= (50 * (self.level + 1) * (self.level + 1))) and (self.count >= self.last):
+            self.all -= 50 * (self.level + 1) * (self.level + 1)
             self.lcd_main_2.display(self.level + 1)
             self.last = self.count
             self.level += 1
-            self.max_level = 50 * (self.level+1) * (self.level+1)
+            self.max_level = 50 * (self.level + 1) * (self.level + 1)
             self.progressBar_level.setMaximum(self.max_level)
         if self.count == 30:
             self.lineEdit_2.setText('Начало положено! Продолжайте кликать и улучшайте вашу группу!')
         if self.level == 3 and self.trig == 0 and self.g_1 + self.g_2 >= 4:
             self.factor = self.factor / 1.2
-            self.trig +=1
+            self.trig += 1
             self.lineEdit_2.setText('Этой Группой становится сложно управлять...')
         if self.level == 6 and self.trig_2 == 0 and self.g_1 >= 5:
             self.factor = self.factor / 1.2
-            self.trig_2 +=1
+            self.trig_2 += 1
             self.lineEdit_2.setText('Приходится увеличивать зарплаты сотрудникам...')
         if self.level == 10 and self.trig_3 == 0 and self.g_4 + self.g_1 <= 10:
             self.factor = self.factor / 1.2
-            self.trig +=1
+            self.trig += 1
             self.lineEdit_2.setText('Недостаточно админов...')
         if self.level == 10 and self.trig_3 == 0 and self.g_3 <= 5:
             self.factor = self.factor / 1.1
-            self.trig +=1
+            self.trig += 1
             self.lineEdit_2.setText('Группа выглядит слишком плохо...')
         self.i = 1
         self.lcd_main.display(self.count)
